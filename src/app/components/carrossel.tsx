@@ -38,7 +38,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, interval = 2500 }) => {
       onMouseLeave={() => setIsPaused(false)} // Retoma ao sair com o mouse
     >
     
-      {/* Imagem atual */}
+      
       <div className="overflow-hidden rounded-lg">
       <div>
         {/* Botões de navegação */}
@@ -58,12 +58,13 @@ const Carousel: React.FC<CarouselProps> = ({ items, interval = 2500 }) => {
       </button>
       </div>
     </div>
+    {/* Imagem atual */}
         <Image
           src={items[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          width={311}
+          width={200}
           height={304}
-          className="w-full h-64 object-cover transition-all duration-500"
+          className="w-full h-64 md:h-72 object-cover transition-all duration-500"
         />
         
       </div>
